@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display'; font-size: 22px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 400px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+.project-cards {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-card {
+    border: 1px solid black;
+    box-shadow: 0 14px 10px -3px #0000003a;
+}
+
+.project-card-screenshot {
+    background-color: #7C75CA;
+    border-bottom: 1px solid black;
+    padding: 30px;
+    text-align: center;
+}
+
+.project-card-info {
+    padding: 15px;
+}
+
+.project-card-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address, .contacts {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 40px;
+    display: flex;
+    color: whitesmoke;
+    background-color: #0991B3;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-photo img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 14px 10px -3px #0000003a;
+}
+
+.main {
+    padding: 40px;
+}
+
+.social {
+    color: black;
+    font-size: 40px;
+}
+
+.about-me .social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    display: flex;
+    padding: 40px;
+    background-color: #0991B3;
+}
+
+.header .about-me {
+    padding: 20px;
+    box-shadow: 0 14px 10px -3px #0000003a;
+    background-color: white;
+}
+
+.header-photo {
+    height: 350px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.header-photo img {
+    box-shadow: 0 14px 10px -3px #0000003a;
+}
+
+.header-photo-text {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 36px;
+}
+
+@media (max-width: 600px) {
+    .header, .footer {
+        flex-direction: column;
+    }
+
+    .about-me h1, .main h1, .contact-me h1 {
+        text-align: center;
+    }
+
+    .about-me .social {
+        justify-content: center;
+    }
+
+    .header-photo {
+        width: 100%;
+    }
+
+    .phone .mdi-phone-outline, .mdi-email-outline {
+        display: none;
+    }
+}
